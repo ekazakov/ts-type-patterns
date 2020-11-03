@@ -1,5 +1,9 @@
 import React, {ComponentPropsWithoutRef, forwardRef} from 'react';
 
+////////////////////////////////////////////////////////////////
+// Polymorphic Components with ref forwarding
+////////////////////////////////////////////////////////////////
+
 interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
     href?: undefined;
 }
