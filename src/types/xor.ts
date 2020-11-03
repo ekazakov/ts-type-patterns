@@ -5,7 +5,7 @@
 type Without<T, U> = {[P in Exclude<keyof T, keyof U>]?: never};
 
 // Creates mutual exclusive union
-type XOR<T, U> = T | U extends object ? (Without<T, U> & U) | (Without<U, T> & T) : T | U;
+export type XOR<T, U> = T | U extends object ? (Without<T, U> & U) | (Without<U, T> & T) : T | U;
 
 // TODO: Extract Union back
 type XorToUnion<T> = T extends XOR<infer A, infer B> ? (A | B) : never;
